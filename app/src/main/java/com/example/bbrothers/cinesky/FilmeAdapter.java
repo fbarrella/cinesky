@@ -12,6 +12,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+
 public class FilmeAdapter extends ArrayAdapter<Filme>{
 
     private Context context;
@@ -24,7 +25,7 @@ public class FilmeAdapter extends ArrayAdapter<Filme>{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inf =
                 (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View objView = inf.inflate(R.layout.grid_object, parent, false);
@@ -41,7 +42,8 @@ public class FilmeAdapter extends ArrayAdapter<Filme>{
     public void loadImage(String u, ImageView iv){
         Picasso.get()
                 .load(u)
-                .resize(142, 213)
+                .resize(300, 450)
+                .centerCrop()
                 .placeholder(R.drawable.cover_loading)
                 .error(R.drawable.cover_missing)
                 .into(iv);

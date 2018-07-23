@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:textColor="#d0d3d8"
         android:text="Exemplo"
         android:layout_below="@id/imgFilme"/>
